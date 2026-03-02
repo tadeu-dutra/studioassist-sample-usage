@@ -1,9 +1,28 @@
 {
-  "keywordFileContentHash": "D0255C9CC701F460352B004F82D6E925",
+  "keywordFileContentHash": "6DEA21DB5C1EFA1F3C34F878A1C1910E",
   "keywordClasses": [
     {
       "name": "com.example.MyCustomKeyword",
-      "keywordMethods": []
+      "keywordMethods": [
+        {
+          "name": "clickElement",
+          "parameters": [
+            {
+              "name": "testObjectId",
+              "initialExpression": "",
+              "type": {
+                "fullClassName": "java.lang.String",
+                "unresolvedClassName": "String",
+                "isArray": false,
+                "isGnericsPlaceHolder": false,
+                "hasImmutableClassName": false,
+                "genericsTypes": [],
+                "errorOnParsing": false
+              }
+            }
+          ]
+        }
+      ]
     }
   ],
   "javadocParsed": false

@@ -2,8 +2,9 @@
 <TestCaseEntity>
    <description></description>
    <name>2. Generate Basic Script 2</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>50d50496-eeaa-47ee-8088-c459ac50ebfa</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
