@@ -42,3 +42,31 @@ import org.openqa.selenium.Keys as Keys
  * 		6. Close the browser
  *
  */
+
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import internal.GlobalVariable as GlobalVariable
+
+//def Username = 'testuser'
+//def Password = 'testpass'
+
+// Open browser to the URL stored in GlobalVariable.G_SiteURL
+WebUI.openBrowser(GlobalVariable.G_SiteURL)
+
+// Click the make appointment button
+WebUI.click(findTestObject('Object Repository/Page_CuraHomepage/btn_MakeAppointment'))
+
+// Fill in the username field based on the variable Username
+WebUI.setText(findTestObject('Object Repository/Page_Login/txt_UserName'), Username)
+
+// Fill in the password field based on the variable Password
+WebUI.setText(findTestObject('Object Repository/Page_Login/txt_Password'), Password)
+
+// Click the login button
+WebUI.click(findTestObject('Object Repository/Page_Login/btn_Login'))
+
+// Verify that the appointment div exists with timeout 10s
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_CuraAppointment/div_Appointment'), 10)
+
+// Close the browser
+WebUI.closeBrowser()

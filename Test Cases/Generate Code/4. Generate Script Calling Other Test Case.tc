@@ -2,8 +2,9 @@
 <TestCaseEntity>
    <description></description>
    <name>4. Generate Script Calling Other Test Case</name>
-   <tag></tag>
+   <tag>GenAI</tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>d7d6640c-6806-4bd5-91b9-76867dbf4440</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
