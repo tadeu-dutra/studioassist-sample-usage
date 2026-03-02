@@ -43,3 +43,25 @@ import org.openqa.selenium.Keys as Keys
  *  	- Capture the screenshot of the page
  *  	- Close the browser
 */
+import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+
+//String Password = 'Password' 
+// Call the test case 'Generate Code/4.1. Called Test Case' with Username and Password variables to login
+WebUI.callTestCase(findTestCase('Generate Code/4.1. Called Test Case'), [('Username') : 'John Doe', ('Password') : Password], FailureHandling.STOP_ON_FAILURE)
+// Select the option with the label 'Hongkong CURA Healthcare Center' in the facility dropdown (not a regex)
+WebUI.selectOptionByLabel(findTestObject('Object Repository/Page_CuraAppointment/lst_Facility'), 'Hongkong CURA Healthcare Center', false)
+// Check the Medicaid health program option
+WebUI.check(findTestObject('Object Repository/Page_CuraAppointment/chk_Medicaid'))
+// Set the visit date to '10/03/2024'
+WebUI.setText(findTestObject('Object Repository/Page_CuraAppointment/txt_VisitDate'), '10/03/2024')
+// Write the comment 'Please make an appointment as soon as possible'
+WebUI.setText(findTestObject('Object Repository/Page_CuraAppointment/txt_Comment'), 'Please make an appointment as soon as possible')
+// Submit the appointment by clicking the Book Appointment button
+WebUI.click(findTestObject('Object Repository/Page_CuraAppointment/btn_BookAppointment'))
+// Capture a screenshot of the page
+WebUI.takeScreenshot()
+// Close the browser
+WebUI.closeBrowser()

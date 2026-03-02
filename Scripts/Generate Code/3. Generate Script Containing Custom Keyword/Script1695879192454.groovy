@@ -37,4 +37,26 @@ import org.openqa.selenium.Keys as Keys
  * 6. Verify that the 'Page_CuraAppointment/div_Appointment' element is present with 10 seconds timeout
  * 7. Close the browser
  */
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import internal.GlobalVariable as GlobalVariable
+
+// Open a browser session
+WebUI.openBrowser('')
+// Navigate to the GlobalVariable.G_SiteURL URL
+WebUI.navigateToUrl(GlobalVariable.G_SiteURL)
+// Click the 'Page_CuraHomepage/btn_MakeAppointment' button using the custom keyword
+CustomKeywords.'com.example.MyCustomKeyword.clickElement'('Object Repository/Page_CuraHomepage/btn_MakeAppointment')
+//def Username = 'JohnDoe'
+//def Password = 'ThisIsNotAPassword'
+// Set the username object 'Page_Login/txt_UserName' with the 'Username' local variable
+WebUI.setText(findTestObject('Object Repository/Page_Login/txt_UserName'), Username)
+// Set the password object 'Page_Login/txt_Password' with the 'Password' local variable
+WebUI.setText(findTestObject('Object Repository/Page_Login/txt_Password'), Password)
+// Click the 'Page_Login/btn_Login' login button using the custom keyword
+CustomKeywords.'com.example.MyCustomKeyword.clickElement'('Object Repository/Page_Login/btn_Login')
+// Verify that the 'Page_CuraAppointment/div_Appointment' element is present with 10 seconds timeout
+WebUI.verifyElementPresent(findTestObject('Object Repository/Page_CuraAppointment/div_Appointment'), 10)
+// Close the browser
+WebUI.closeBrowser()
 
