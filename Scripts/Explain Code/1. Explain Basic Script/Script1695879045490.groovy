@@ -36,3 +36,15 @@ WebUI.click(findTestObject('Page_Login/btn_Login'))
 WebUI.verifyElementPresent(findTestObject('Page_CuraAppointment/div_Appointment'), 0)
 
 WebUI.closeBrowser()
+/*
+*  Automate opening a site, logging in with credentials, verifying appointment page presence, and closing the browser.
+*
+*  1. Open browser and navigate to the URL stored in the global variable G_SiteURL.
+*  2. Click the "Make Appointment" button on the homepage.
+*  3. Enter the Username into the username text field on the login page.
+*  4. Enter the Password into the password text field on the login page.
+*  5. Click the login button to submit credentials.
+*  6. Verify that the appointment section (div_Appointment) is present on the appointment page, using a zero-second timeout.
+*  7. Close the browser.
+*
+*/

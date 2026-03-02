@@ -26,3 +26,16 @@ import org.openqa.selenium.Keys as Keys
 String date = '10:03 AM'
 
 WebUI.verifyMatch(date, '^(1[0-2]|0?[1-9]):[0-5][0-9] (AM|PM)$', true)
+
+/*
+*  Validate that a time string matches a 12-hour clock format with minutes and AM/PM.
+*
+*  1. Import many testing and web interaction utility classes and static finder helpers for test objects and resources.
+*  2. Declare a string variable date with the value '10:03 AM'.
+*  3. Call verifyMatch to assert that date matches the regular expression '^(1[0-2]|0?[1-9]):[0-5][0-9] (AM|PM)$' with exact matching enabled; the regex:
+*     - ^ and $ anchor the pattern to the start and end of the string.
+*     - (1[0-2]|0?[1-9]) allow hour values 01–09 (optional leading zero), 1–9, and 10–12.
+*     - : require a literal colon between hour and minutes.
+*     - [0-5][0-9] require minutes from 00 to 59.
+*     -  (AM|PM) require a space followed by either AM or PM in uppercase.
+*/

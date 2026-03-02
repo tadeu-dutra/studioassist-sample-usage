@@ -4,6 +4,7 @@
    <name>1. Explain Basic Script</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>a400f7c2-9282-4817-a4a1-5e1802202d8c</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
